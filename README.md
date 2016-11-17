@@ -6,7 +6,7 @@ PSUEDO CODE FOR HANGMAN PROJECT
 
 
 * use REGEX to filter out alpha-numeric characters  
-* need to take in account words with multiples of letters  
+* need to take in account words with multiples of letters
 * negate letter casing  
 
 1. Create an array of "random" words  
@@ -16,3 +16,12 @@ PSUEDO CODE FOR HANGMAN PROJECT
 5. Create function to check against split array to see if letter is present  
 6. Create an alert or feedback is letter is present or not  
 7. Repeat until user wins game  
+
+
+***
+
+### BRAINSTORM
+* traditional hangman  
+* racing  
+* basketball - free throw game vs computer - each incorrect gives computer points  
+*
