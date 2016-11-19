@@ -28,6 +28,7 @@ console.log(selectedWord);
 
 
 function game() {
+  var userTries = 0;
   var selectedWord = wordBank[Math.floor(Math.random() * arrLength )];
   var splitWord = selectedWord.split("");
 
