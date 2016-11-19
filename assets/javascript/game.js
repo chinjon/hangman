@@ -3,15 +3,15 @@ var wordBank = ["school", "running", "loud", "hand", "skyscraper", "construction
 
 // MESSAGES TO USER
 var winnerMessage = "Congrats, you win!",
-loserMessage = "Sorry, please try again.",
-confirmIncorrect = "Letter is not in word",
-confirmCorrect = "Letter exists in word";
+    loserMessage = "Sorry, please try again.",
+    confirmIncorrect = "Letter is not in word",
+    confirmCorrect = "Letter exists in word";
 
 // USER COUNTERS
 var losesCounter = 0,
-  winsCounter = 0,
-  guessesCounter = 0,
-  wordCounter = 0; // if wordCounter = word.length === 'YOU WIN'
+    winsCounter = 0,
+    guessesCounter = 0,
+    wordCounter = 0; // if wordCounter = word.length === 'YOU WIN'
 // if guesses === max fail attempts { alert you lose }
 
 
@@ -25,15 +25,15 @@ var losesCounter = 0,
 // when userCounter
 
 // https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
-    // 48 - 90
-    // a - z
-    // if (event.key > )
+// 48 - 90
+// a - z
+// if (event.key > )
 
-
+// CREATE A WELCOME SCREEN??
 
 // http://www.w3schools.com/charsets/ref_html_ascii.asp
-    // 97 - 122
-    // a - z
+// 97 - 122
+// a - z
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 
@@ -55,32 +55,32 @@ var losesCounter = 0,
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 
-var selectedWord = wordBank[Math.floor(Math.random() * arrLength )];
+var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
 var splitWord = selectedWord.split("");
 var selectedWordLength = selectedWord.length;
-  console.log(selectedWord);
+console.log(selectedWord);
 
-  var placeholder = "";
-  for(var i = 0; i < selectedWordLength; i++) {
-    placeholder+="-";
-  }
-  var placeholderSplit = placeholder.split('');
+var placeholder = "";
+for (var i = 0; i < selectedWordLength; i++) {
+    placeholder += "-";
+}
+var placeholderSplit = placeholder.split('');
 
 
 var usedWrongLetters = [];
 
 
-function winnerNotification () {
-  if (wordCounter === selectedWordLength) {
-    console.log("You Win The Game!")
-  }
+function winnerNotification() {
+    if (wordCounter === selectedWordLength) {
+        console.log("You Win The Game!")
+    }
 }
 
 // create a "last letter selected" indicator
 // use different color text to indicate last letter guessed
 
-String.prototype.replaceAt=function(index, character) {
-    return this.substr(0, index) + character + this.substr(index+character.length);
+String.prototype.replaceAt = function (index, character) {
+    return this.substr(0, index) + character + this.substr(index + character.length);
 }
 
 
@@ -92,31 +92,34 @@ String.prototype.replaceAt=function(index, character) {
 
 document.onkeyup = function () {
 
-  var letter = event.key
+    var letter = event.key
 
-// will only print out keypress if a letter is pressed on the keyboard
-  if(letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
-  var userInput = event.key
-  // console.log(userInput);
+    // will only print out keypress if a letter is pressed on the keyboard
+    if (letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
+        var userInput = event.key
+            // console.log(userInput);
 
-  if(splitWord.indexOf(userInput) > -1) {
-    for (let i = 0; i < splitWord.length; i++) {
+        if (splitWord.indexOf(userInput) > -1) {
+            for (let i = 0; i < splitWord.length; i++) {
 
-      if(userInput === selectedWord.charAt(i)) {
-        placeholderSplit.splice(i, 1, userInput);
-        console.log(placeholderSplit);
-        wordCounter+=1;
-        winnerNotification ()
-      }
-  }
+                if (userInput === selectedWord.charAt(i)) {
+                    placeholderSplit.splice(i, 1, userInput);
+                    // console.log(placeholderSplit.join(""));
+                    document.getElementById('userGameSpace').innerHTML = placeholderSplit.join("");
+                    wordCounter += 1;
+                    winnerNotification()
+                }
+            }
+        } else {
+            console.log("Incorrect letter selection");
+        }
+    }
 }
-}
-}
 
-  // placeholderSplit.splice(splitWord.indexOf(userInput), 1, splitWord[splitWord.indexOf(userInput)])
-  // console.log(placeholderSplit);
-  // wordCounter += 1;
-  // winnerNotification();
+// placeholderSplit.splice(splitWord.indexOf(userInput), 1, splitWord[splitWord.indexOf(userInput)])
+// console.log(placeholderSplit);
+// wordCounter += 1;
+// winnerNotification();
 
 // console.log(selectedWord);
 
