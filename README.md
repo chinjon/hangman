@@ -1,2 +1,3 @@
-# week-3-game
-hangman game for Rutgers Coding Bootcamp
+# Hangman  
+
+A hangman-styled game for Rutgers Coding Bootcamp.  
