@@ -12,7 +12,7 @@ var losesCounter = 0,
     winsCounter = 0,
     guessesCounter = 0,
     wordCounter = 0,
-    incorrectTries =0; // if wordCounter = word.length === 'YOU WIN'
+    incorrectTries = 0; // if wordCounter = word.length === 'YOU WIN'
 
 var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
 var splitWord = selectedWord.split("");
@@ -27,7 +27,7 @@ var placeholderSplit = placeholder.split('');
 document.getElementById('userGameSpace').innerHTML = placeholder;
 
 var usedWrongLetters = [],
-  correctLetters = [];
+    correctLetters = [];
 
 
 function winnerNotification() {
@@ -37,52 +37,53 @@ function winnerNotification() {
     }
 }
 
+
+
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 
 // need to take into account for duplicate letters
 // use FOR loop to iterate through each letter
 
-document.onkeyup = function () {
+document.onkeyup = function() {
 
-    var letter = event.key
+        var letter = event.key
 
-    // will only print out keypress if a letter is pressed on the keyboard
-    if (letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
-        var userInput = event.key
-            // console.log(userInput);
+        // will only print out keypress if a letter is pressed on the keyboard
+        if (letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
+            var userInput = event.key
+                // console.log(userInput);
 
-        if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
-              // prevents users from selecting letters already selected
+            if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
+                // prevents users from selecting letters already selected
 
-            for (let i = 0; i < splitWord.length; i++) {
+                for (let i = 0; i < splitWord.length; i++) {
 
-                if (userInput === selectedWord.charAt(i)) {
-                    placeholderSplit.splice(i, 1, userInput.toUpperCase());
-                    // console.log(placeholderSplit.join(""));
-                    document.getElementById('userGameSpace').innerHTML = placeholderSplit.join("");
-                    wordCounter += 1;
-                    correctLetters.push(userInput);
-                    //console.log(correctLetters);
-                    document.getElementById('gameMessage').innerHTML = "Correct Letter!";
-                    winnerNotification();
+                    if (userInput === selectedWord.charAt(i)) {
+                        placeholderSplit.splice(i, 1, userInput.toUpperCase());
+                        // console.log(placeholderSplit.join(""));
+                        document.getElementById('userGameSpace').innerHTML = placeholderSplit.join("");
+                        wordCounter += 1;
+                        correctLetters.push(userInput);
+                        //console.log(correctLetters);
+                        document.getElementById('gameMessage').innerHTML = "Correct Letter!";
+                        winnerNotification();
+                    }
                 }
+            } else if (((splitWord.indexOf(userInput > -1)) && (correctLetters.indexOf(userInput) > -1)) || (usedWrongLetters.indexOf(userInput) > -1)) {
+                // console.log("Sorry you have already selected that letter");
+                document.getElementById('gameMessage').innerHTML = letterAlreadyPicked;
+            } else {
+                document.getElementById('gameMessage').innerHTML = letterNotExist;
+                incorrectTries += 1;
+                usedWrongLetters.push(userInput);
+                console.log(usedWrongLetters);
+                document.getElementById("usedLettersWrong").innerHTML = usedWrongLetters;
+                //console.log("Incorrect letter selection");
             }
-        } else if(((splitWord.indexOf(userInput > -1)) && (correctLetters.indexOf(userInput) > -1)) || (usedWrongLetters.indexOf(userInput) > -1) ) {
-          // console.log("Sorry you have already selected that letter");
-          document.getElementById('gameMessage').innerHTML = letterAlreadyPicked;
-        }
-
-        else {
-          document.getElementById('gameMessage').innerHTML = letterNotExist;
-            usedWrongLetters.push(userInput);
-            console.log(usedWrongLetters);
-            document.getElementById("usedLettersWrong").innerHTML = usedWrongLetters;
-            //console.log("Incorrect letter selection");
         }
     }
-}
-// push selection to an array that stores correct letters
-// use a loop to check against it
+    // push selection to an array that stores correct letters
+    // use a loop to check against it
 
 
 // placeholderSplit.splice(splitWord.indexOf(userInput), 1, splitWord[splitWord.indexOf(userInput)])
