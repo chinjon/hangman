@@ -7,14 +7,14 @@ font-family: 'Arvo', serif;
 */
 
 body {
-  font-family: 'Arvo', serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 h1,
 h2,
 h3,
 h4, {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 #mainGameSpace {
