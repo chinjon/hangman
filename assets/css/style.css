@@ -6,6 +6,25 @@ font-family: 'Arvo', serif;
 
 */
 
+body {
+  font-family: 'Arvo', serif;
+}
+
+h1,
+h2,
+h3,
+h4, {
+  font-family: 'PT Sans', sans-serif;
+}
+
+#mainGameSpace {
+  padding: 50px;
+}
+
+
+#gameMessage {
+  padding: 50px;
+}
 
 .footer {
   background-color: #666;
@@ -21,6 +40,6 @@ font-family: 'Arvo', serif;
 
 .footer-text {
   color: #fff;
-  line-height: 65px;
+  line-height: 70px;
   font-size: 13px;
 }
