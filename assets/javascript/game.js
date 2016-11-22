@@ -57,8 +57,13 @@ document.onkeyup = function() {
                 // console.log(userInput);
 
             // need to create a condition to stop program all together and reset page
-            if ( incorrectTries  === 1){
-                  // usedWrongLetters.push(userInput);
+            if ( incorrectTries <= 0 ) {
+              incorrectTries = 0;
+              document.getElementById('triesMessage').innerHTML = incorrectTries;
+              document.getElementById('usedWrongLetters').innerHTML = usedWrongLetters;
+
+            } else if ( incorrectTries  === 1){
+                  usedWrongLetters.push(userInput);
                   document.getElementById('usedLettersWrong').innerHTML = usedWrongLetters;
                   incorrectTries -=1;
                   document.getElementById('triesMessage').innerHTML = incorrectTries;
