@@ -1,4 +1,4 @@
-var wordBank = ["school", "running", "loud", "hand", "skyscraper", "construction", "basketball"],
+var wordBank = ["school", "running", "loud", "hand", "skyscraper", "construction", "basketball", "graduation", "spruce", "cleaner", "cooler", "engulfing"],
     arrLength = wordBank.length;
 
 // MESSAGES TO USER

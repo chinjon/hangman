@@ -21,6 +21,18 @@ h4, {
   padding: 50px;
 }
 
+.fa {
+  color: #fff;
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 
 #gameMessage {
   padding: 50px;
@@ -40,6 +52,6 @@ h4, {
 
 .footer-text {
   color: #fff;
-  line-height: 70px;
+  line-height: 65px;
   font-size: 13px;
 }
