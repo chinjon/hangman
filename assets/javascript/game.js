@@ -3,7 +3,7 @@ var wordBank = ["school", "running", "loud", "hand", "skyscraper", "construction
 
 // MESSAGES TO USER
 var winnerMessage = "Congrats, you win!",
-    loserMessage = "Sorry, please try again.",
+    loserMessage = "Sorry, out of tries. Please try again.",
     letterAlreadyPicked = "Sorry, that letter was already used.",
     letterNotExist = "Sorry, that letter does not exist in the word.";
 
@@ -12,7 +12,7 @@ var losesCounter = 0,
     winsCounter = 0,
     guessesCounter = 0,
     wordCounter = 0,
-    incorrectTries = 0; // if wordCounter = word.length === 'YOU WIN'
+    incorrectTries = 5; // if wordCounter = word.length === 'YOU WIN'
 
 var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
 var splitWord = selectedWord.split("");
@@ -29,7 +29,6 @@ document.getElementById('userGameSpace').innerHTML = placeholder;
 var usedWrongLetters = [],
     correctLetters = [];
 
-
 function winnerNotification() {
     if (wordCounter === selectedWordLength) {
         // console.log(winnerMessage)
@@ -37,12 +36,16 @@ function winnerNotification() {
     }
 }
 
-
+function loseGameNotify() {
+    document.getElementById('gameMessage').innerHTML = loserMessage;
+  }
 
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 
 // need to take into account for duplicate letters
 // use FOR loop to iterate through each letter
+
+// create button to reset page?? http://stackoverflow.com/questions/6666363/is-it-possible-to-clear-a-form-an-reset-reload-the-page-with-one-button
 
 document.onkeyup = function() {
 
@@ -52,8 +55,11 @@ document.onkeyup = function() {
         if (letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
             var userInput = event.key
                 // console.log(userInput);
-
-            if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
+            if ( incorrectTries  <= 1){
+                  document.getElementById('usedLettersWrong').innerHTML = usedWrongLetters;
+                  document.getElementById('triesMessage').innerHTML = 0;
+                  loseGameNotify();
+            } else if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
                 // prevents users from selecting letters already selected
 
                 for (let i = 0; i < splitWord.length; i++) {
@@ -74,7 +80,8 @@ document.onkeyup = function() {
                 document.getElementById('gameMessage').innerHTML = letterAlreadyPicked;
             } else {
                 document.getElementById('gameMessage').innerHTML = letterNotExist;
-                incorrectTries += 1;
+                incorrectTries -= 1;
+                document.getElementById('triesMessage').innerHTML = incorrectTries;
                 usedWrongLetters.push(userInput);
                 console.log(usedWrongLetters);
                 document.getElementById("usedLettersWrong").innerHTML = usedWrongLetters;
