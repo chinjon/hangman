@@ -55,9 +55,14 @@ document.onkeyup = function() {
         if (letter.charCodeAt(0) > 96 && letter.charCodeAt(0) < 123) {
             var userInput = event.key
                 // console.log(userInput);
-            if ( incorrectTries  <= 1){
+
+            // need to create a condition to stop program all together and reset page
+            if ( incorrectTries  === 1){
+                  // usedWrongLetters.push(userInput);
                   document.getElementById('usedLettersWrong').innerHTML = usedWrongLetters;
-                  document.getElementById('triesMessage').innerHTML = 0;
+                  incorrectTries -=1;
+                  document.getElementById('triesMessage').innerHTML = incorrectTries;
+
                   loseGameNotify();
             } else if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
                 // prevents users from selecting letters already selected
