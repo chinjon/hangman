@@ -89,7 +89,7 @@ document.onkeyup = function () {
                 if (userInput === selectedWord.charAt(i)) {
                     placeholderSplit.splice(i, 1, userInput.toUpperCase());
                     // console.log(placeholderSplit.join(""));
-                    targetTriesMessage.innerHTML = placeholderSplit.join("");
+                    targetGameSpace.innerHTML = placeholderSplit.join("");
                     wordCounter += 1;
                     correctLetters.push(userInput);
                     //console.log(correctLetters);
