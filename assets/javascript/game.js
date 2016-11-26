@@ -1,4 +1,4 @@
-var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes", "phasers"],
+var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes", "fazers"],
     arrLength = wordBank.length;
 
 // MESSAGES TO USER
@@ -39,6 +39,7 @@ function winnerNotification() {
     if (wordCounter === selectedWordLength) {
         // console.log(winnerMessage)
         targetGameMessage.innerHTML = winnerMessage;
+        sound.play()
     }
 }
 
@@ -49,10 +50,9 @@ $(document).ready(function() {
   $("#topSplash").fadeIn(2700, "linear");
 });
 
-// $(document).ready(function() {
-//   $("#topSplash").hide();
-//   $("#topSplash").fadeIn(3000, "linear");
-// });
+var sound = new Howl({
+  src: ['assets/sound/fazers-cut.mp3']
+});
 
 
 function loseGameNotify() {

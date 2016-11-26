@@ -58,7 +58,6 @@ a:visited {
   top: 50px;
   height: 680px;
   left: 340px;
-
 }
 
 
@@ -82,4 +81,23 @@ a:visited {
   color: #fff;
   line-height: 65px;
   font-size: 13px;
+}
+
+
+@media screen and (max-width: 1210px) {
+  #info {
+    width: 370px;
+    top: 70px;
+    height: 680px;
+    left: 270px;
+  }
+}
+
+@media screen and (max-width: 1001px) {
+  #info {
+    width: 330px;
+    top: 90px;
+    height: 680px;
+    left: 185px;
+  }
 }
