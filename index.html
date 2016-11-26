@@ -12,36 +12,51 @@
     <div id="topSplash">
       <div class="container">
         <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/mf-doom-img2-cut.png" data-z-index="-3" id="doom-img">
-          <section  id="info" class="text-center">
+          <div  id="info" class="text-center">
           <p>
             The slickest of rhyme dealers, MF DOOM's unconventional flow and distinctive production style is imaginative and infinitely creative.
           </p>
           <p>
             Born Daniel Dumile, the elusive hip-hop figure has been mystifying critics and fans alike with his laboriously crafted body of work that spans decades. With his trademark mask and penchant for words seldom used in our everday lives, the enigmatic DOOM has garnered a cult followed that extends to other genres of music from Mos Def to Radiohead to The Roots.
           </p>
-        </section>
+        </div>
         </div>
       </div>
     </div>
 
 
-  <div class="container">
+  <div class="container" id="mainGameSpace">
+
     <!-- <div class="row">
       <h1 class="page-header">Hangman</h1>
     </div> -->
-    <div class="row" id="mainGameSpace">
-      <div class="col-md-6 text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Clue: &nbsp;<span id="wordClue"></span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
         <h1 id="userGameSpace"></h1>
       </div>
-      <div class="col-md-6 text-center">
+      <div class="col-md-4 text-center">
         <h2>Used Letters: &nbsp; <span id="usedLettersWrong"></span></h2>
       </div>
+      <div class="col-md-4 text-center">
+        <h2>Attempts Left: &nbsp;<span id="triesMessage">5</span></h2>
+      </div>
     </div>
-    <div class="row">
-      <h2 class="col-md-12 text-center">Attempts Left: &nbsp;<span id="triesMessage">5</span></h2>
-    </div>
+
     <div class="row">
       <h2 class="col-md-12 text-center" id="gameMessage"></h2>
+    </div>
+    <div class="row">
+      <h2 class="col-md-12" id="songAlbum"></h2>
+    </div>
+    <div class="row" id="lyrics">
+      <h3 class="col-md-12">
+        <span id="lyricsBefore"></span><span id="lyricsWord"></span><span id="lyricsAfter"></span>
+      </h3>
     </div>
   </div>
   <div class="container">

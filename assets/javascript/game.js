@@ -1,5 +1,10 @@
-var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes", "fazers"],
+var wordBank = ["fazers", "accordion", "dimes"],
     arrLength = wordBank.length;
+// ,"villain",  "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes"
+var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
+var splitWord = selectedWord.split("");
+var selectedWordLength = selectedWord.length;
+console.log(selectedWord);
 
 // MESSAGES TO USER
 var winnerMessage = "Congrats, you win!",
@@ -13,6 +18,12 @@ var targetGameMessage = document.getElementById('gameMessage'),
     targetGameSpace = document.getElementById('userGameSpace'),
     targetTriesMessage = document.getElementById('triesMessage');
 
+var targetLyrics = document.getElementById('lyrics'),
+    targetBeforeLyrics = document.getElementById('lyricsBefore'),
+    targetWordLyrics = document.getElementById('lyricsWord'),
+    targetAfterLyrics = document.getElementById('lyricsAfter'),
+    targetTrackInfo = document.getElementById('songAlbum');
+
 // USER COUNTERS
 var losesCounter = 0,
     winsCounter = 0,
@@ -20,10 +31,38 @@ var losesCounter = 0,
     wordCounter = 0,
     incorrectTries = 5;
 
-var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
-var splitWord = selectedWord.split("");
-var selectedWordLength = selectedWord.length;
-console.log(selectedWord);
+
+var lyricsObject = {
+  "fazers" : {
+    "lyric full" : "Nowadays it's amazing raising young rule number one: Keep your fazers on stun.",
+    "clue": "Weapon of choice on 'Star Trek' and rhymes with 'laser'.",
+    "lyrics before" : "Nowadays it's amazing raising young rule number one: Keep your ",
+    "lyrics word" : "fazers",
+    "lyrics after" : " on stun.",
+    "track info" : "Fazers",
+    "album info" : "Take Me To Your Leader"
+  },
+  "accordion" : {
+    "lyrics" : "And get more cheese than Doritos, Cheetos or Fritos Slip like Freudian your first and last step to playing yourself like accordion.",
+    "clue" : "A piano that you can squish and uses air to make music.",
+    "lyrics before" : "And get more cheese than Doritos, Cheetos or Fritos Slip like Freudian Your first and last step to playing yourself like",
+    "lyrics word" : " accordion" ,
+    "lyrics after" : ".",
+    "track info" : "Accordion",
+    "album info" : "Madvilliany"
+  },
+  "dimes" : {
+    "lyrics" : "I sell rhymes like dimes the one who mostly keep cash but brag about the broker times.",
+    "clue" : "10 cents",
+    "lyrics before" : "I sell rhymes like ",
+    "lyrics word" : "dimes",
+    "lyrics after" : " the one who mostly keep cash but brag about the broker times.",
+    "track info" : "Rhymes Like Dimes",
+    "album info" : "Operation Doomsday"
+  }
+}
+
+
 
 var placeholder = "";
 for (var i = 0; i < selectedWordLength; i++) {
@@ -39,8 +78,20 @@ function winnerNotification() {
     if (wordCounter === selectedWordLength) {
         // console.log(winnerMessage)
         targetGameMessage.innerHTML = winnerMessage;
+        // targetGameMessage.innerHTML = lyricsObject[selectedWord]["lyric"];
+        targetBeforeLyrics.innerHTML = "'" + lyricsObject[selectedWord]["lyrics before"];
+        targetWordLyrics.innerHTML = lyricsObject[selectedWord]["lyrics word"];
+        targetAfterLyrics.innerHTML = lyricsObject[selectedWord]["lyrics after"]+"'";
+        targetTrackInfo.innerHTML = "Lyrics From: " + lyricsObject[selectedWord]["track info"] + " - "  + lyricsObject[selectedWord]["album info"];
+
+
         sound.play()
     }
+}
+
+
+function loseGameNotify() {
+    targetGameMessage.innerHTML = loserMessage;
 }
 
 $('.parallax-window').parallax({imageSrc: 'assets/images/mf-doom-img2-cut.png'});
@@ -48,16 +99,15 @@ $('.parallax-window').parallax({imageSrc: 'assets/images/mf-doom-img2-cut.png'})
 $(document).ready(function() {
   $("#topSplash").hide();
   $("#topSplash").fadeIn(2700, "linear");
+
+  $("#wordClue").text(lyricsObject[selectedWord]["clue"]);
+
 });
 
 var sound = new Howl({
-  src: ['assets/sound/fazers-cut.mp3']
+  src: ['assets/sound/' + selectedWord + '-cut.mp3']
 });
 
-
-function loseGameNotify() {
-    targetGameMessage.innerHTML = loserMessage;
-}
 
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 
