@@ -42,6 +42,16 @@ function winnerNotification() {
     }
 }
 
+
+
+$(document).ready(function() {
+
+  $("#doom-img").fadeIn("slow", "linear");
+
+
+});
+
+
 function loseGameNotify() {
     targetGameMessage.innerHTML = loserMessage;
 }

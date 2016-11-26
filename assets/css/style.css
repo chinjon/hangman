@@ -7,7 +7,12 @@ font-family: 'Arvo', serif;
 */
 
 body {
-  font-family: 'Source Code Pro', monospace;
+font-family: 'Source Code Pro', monospace;
+/*
+  background-image: url('../images/mf-doom-img2-cut.png');
+  background-repeat: no-repeat;
+  background-position: 8px 8px;*/
+
 }
 
 h1,
@@ -17,8 +22,21 @@ h4, {
   font-family: 'Source Code Pro', monospace;
 }
 
+.container {
+  margin-bottom: 120px;
+}
+
+#topSplash {
+  padding: 100px;
+
+}
+
 #mainGameSpace {
   padding: 50px;
+}
+
+#doom-img {
+  width:400px;
 }
 
 .fa {
