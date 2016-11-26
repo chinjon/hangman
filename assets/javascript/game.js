@@ -1,4 +1,4 @@
-var wordBank = ["school", "running", "loud", "hand", "skyscraper", "construction", "basketball", "graduation", "spruce", "cleaner", "cooler", "engulfing"],
+var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego"],
     arrLength = wordBank.length;
 
 // MESSAGES TO USER
@@ -42,14 +42,17 @@ function winnerNotification() {
     }
 }
 
-
+$('.parallax-window').parallax({imageSrc: 'assets/images/mf-doom-img2-cut.png'});
 
 $(document).ready(function() {
-
-  $("#doom-img").fadeIn("slow", "linear");
-
-
+  $("#topSplash").hide();
+  $("#topSplash").fadeIn(3000, "linear");
 });
+
+// $(document).ready(function() {
+//   $("#topSplash").hide();
+//   $("#topSplash").fadeIn(3000, "linear");
+// });
 
 
 function loseGameNotify() {

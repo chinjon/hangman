@@ -6,13 +6,15 @@ font-family: 'Arvo', serif;
 
 */
 
+.parallax-window {
+    min-height: 650px;
+    background: transparent;
+    position: relative;
+    background:rgba(255,255,255, 0.9);
+}
+
 body {
 font-family: 'Source Code Pro', monospace;
-/*
-  background-image: url('../images/mf-doom-img2-cut.png');
-  background-repeat: no-repeat;
-  background-position: 8px 8px;*/
-
 }
 
 h1,
@@ -26,18 +28,18 @@ h4, {
   margin-bottom: 120px;
 }
 
-#topSplash {
-  padding: 100px;
+/*#topSplash {
+  padding: 50px;
 
-}
+}*/
 
 #mainGameSpace {
   padding: 50px;
 }
 
-#doom-img {
+/*#doom-img {
   width:400px;
-}
+}*/
 
 .fa {
   color: #fff;
@@ -48,6 +50,15 @@ a:active,
 a:link,
 a:visited {
   text-decoration: none;
+}
+
+#info {
+  width: 400px;
+  position: absolute;
+  top: 50px;
+  height: 600px;
+  left: 365px;
+
 }
 
 
