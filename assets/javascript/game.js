@@ -1,4 +1,4 @@
-var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego"],
+var wordBank = ["villain", "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes", "phasers"],
     arrLength = wordBank.length;
 
 // MESSAGES TO USER
@@ -46,7 +46,7 @@ $('.parallax-window').parallax({imageSrc: 'assets/images/mf-doom-img2-cut.png'})
 
 $(document).ready(function() {
   $("#topSplash").hide();
-  $("#topSplash").fadeIn(3000, "linear");
+  $("#topSplash").fadeIn(2700, "linear");
 });
 
 // $(document).ready(function() {
