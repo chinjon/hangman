@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>DOOM-man</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="https://use.fontawesome.com/dce08cf54a.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="topSplash">
-      <div class="container">
-        <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/mf-doom-img2-cut.png" data-z-index="-3" style="height: 400px;" data-natural-height="700" id="doom-img">
-          <div class="text-center" id="info">
-          <p id="pHeader">
-            MF DOOM
-          </p>
-          <p>
-            The slickest of rhyme dealers, MF DOOM's unconventional flow and distinct production style is imaginative and infinitely creative.
-          </p>
-          <p>
-            Born Daniel Dumile, the elusive hip-hop figure has been mystifying critics and fans alike with his laboriously crafted body of work that spans decades. With his trademark mask and penchant for words seldom used in our everday lives, the enigmatic DOOM has garnered a cult followed that extends to other genres of music from Mos Def to Radiohead to The Roots.
-          </p>
-          <p id="instructions">
-            Scroll Down and Press Any Letter To Start.
-          </p>
+        <div class="container">
+            <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/mf-doom-img2-cut.png" data-z-index="-3" style="height: 400px;" data-natural-height="700" id="doom-img">
+                <div class="text-center" id="info">
+                    <p id="pHeader">
+                        MF DOOM
+                    </p>
+                    <p>
+                        The slickest of rhyme dealers, MF DOOM's unconventional flow and distinct production style is imaginative and infinitely creative.
+                    </p>
+                    <p>
+                        Born Daniel Dumile, the elusive hip-hop figure has been mystifying critics and fans alike with his laboriously crafted body of work that spans decades. With his trademark mask and penchant for words seldom used in our everday lives, the enigmatic DOOM
+                        has garnered a cult followed that extends to other genres of music from Mos Def to Radiohead to The Roots.
+                    </p>
+                    <p id="instructions">
+                        Scroll Down and Press Any Letter To Start.
+                    </p>
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
     </div>
 
 
-  <div class="container" id="mainGameSpace">
+    <div class="container" id="mainGameSpace">
 
-    <!-- <div class="row">
+        <!-- <div class="row">
       <h1 class="page-header">Hangman</h1>
     </div> -->
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Clue: &nbsp;<span id="wordClue"></span></h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h1 id="userGameSpace"></h1>
-      </div>
-      <div class="col-md-4 text-center">
-        <h3>Used Letters: &nbsp; <span id="usedLettersWrong"></span></h3>
-      </div>
-      <div class="col-md-4 text-center">
-        <h3>Attempts Left: &nbsp;<span id="triesMessage">5</span></h3>
-      </div>
-      <div class="row">
-        <h3 class="col-md-12 text-center" id="gameMessage"></h3>
-      </div>
-    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Clue: &nbsp;<span id="wordClue"></span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h1 id="userGameSpace"></h1>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Used Letters: &nbsp; <span id="usedLettersWrong"></span></h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Attempts Left: &nbsp;<span id="triesMessage">5</span></h3>
+            </div>
+            <div class="row">
+                <h3 class="col-md-12 text-center" id="gameMessage"></h3>
+            </div>
+        </div>
 
 
-    <div class="row">
-      <h2 class="col-md-12" id="songAlbum"></h2>
-    </div>
-    <div class="row" id="lyrics">
-      <h3 class="col-md-12">
+        <div class="row">
+            <h2 class="col-md-12" id="songAlbum"></h2>
+        </div>
+        <div class="row" id="lyrics">
+            <h3 class="col-md-12">
         <span id="lyricsBefore"></span><span id="lyricsWord"></span><span id="lyricsAfter"></span>
       </h3>
+        </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <!-- https://noisey.vice.com/en_uk/article/the-evolution-of-mf-doom -->
+    <div class="container">
+        <div class="row">
+            <!-- https://noisey.vice.com/en_uk/article/the-evolution-of-mf-doom -->
+        </div>
     </div>
-  </div>
-  <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="container text-center">
-        <p class="col-md-12 footer-text"><a href="https://github.com/chinjon"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a> Copyright 2016 Jonathan Chin</p>
-      </div>
+        <div class="container text-center">
+            <p class="col-md-12 footer-text"><a href="https://github.com/chinjon"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a> Copyright 2016 Jonathan Chin</p>
+        </div>
     </footer>
 
 
-  </body>
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.js"
-    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-    crossorigin="anonymous"></script>
-  <script src="assets/javascript/howlerJS/dist/howler.core.min.js"></script>
-  <script src="assets/javascript/parallaxJS/parallax.js"></script>
-  <script src="assets/javascript/game.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="assets/javascript/howlerJS/dist/howler.core.min.js"></script>
+<script src="assets/javascript/parallaxJS/parallax.js"></script>
+<script src="assets/javascript/game.js"></script>
 
-  <!-- http://guidobouman.github.io/jquery-panelsnap/ -->
-  </html>
+<!-- http://guidobouman.github.io/jquery-panelsnap/ -->
+
+</html>

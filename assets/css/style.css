@@ -38,7 +38,6 @@ h4, {
 
 #instructions {
   margin-top: 50px;
-  font-style: italic;
   color: red;
   font-weight: 800;
 }
@@ -66,7 +65,7 @@ a:visited {
   background: transparent;
   height: 500px;
   left: 300px;
-  font-size: 20px;
+  font-size: 14.5px;
 }
 
 #lyricsWord {
