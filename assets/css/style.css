@@ -35,6 +35,9 @@ h4, {
 
 }*/
 
+#mainGameSpace div {
+  padding: 15px;
+}
 
 #instructions {
   margin-top: 50px;
