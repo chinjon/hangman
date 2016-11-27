@@ -7,7 +7,7 @@ font-family: 'Arvo', serif;
 */
 
 .parallax-window {
-    min-height:600px;
+    min-height:800px;
     background: transparent;
     position: relative;
     background:rgba(255,255,255, 0.9);
