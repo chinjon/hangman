@@ -7,10 +7,11 @@ font-family: 'Arvo', serif;
 */
 
 .parallax-window {
-    min-height: 650px;
+    min-height:600px;
     background: transparent;
     position: relative;
     background:rgba(255,255,255, 0.9);
+    padding-bottom: 300px:
 }
 
 body {
@@ -22,10 +23,11 @@ h2,
 h3,
 h4, {
   font-family: 'Source Code Pro', monospace;
+  margin-top: 10px !important;
 }
 
 .container {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 /*#topSplash {
@@ -33,13 +35,13 @@ h4, {
 
 }*/
 
-#mainGameSpace div {
-  padding: 10px;
-}
 
-/*#doom-img {
-  width:400px;
-}*/
+#instructions {
+  margin-top: 50px;
+  font-style: italic;
+  color: red;
+  font-weight: 800;
+}
 
 .fa {
   color: #fff;
@@ -52,17 +54,34 @@ a:visited {
   text-decoration: none;
 }
 
+#pHeader {
+  font-size: 27px;
+  font-weight: 800;
+}
+
 #info {
-  width: 450px;
+  width: 510px;
   position: absolute;
   top: 50px;
-  height: 750px;
-  left: 340px;
+  background: transparent;
+  height: 500px;
+  left: 300px;
+  font-size: 20px;
 }
 
 #lyricsWord {
   color: red;
   font-weight: 800;
+}
+
+#triesMessage {
+  color: red;
+  font-style: 800;
+}
+
+#usedLetters {
+  color: red;
+  font-style: 800;
 }
 
 #lyrics {

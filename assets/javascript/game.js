@@ -1,6 +1,9 @@
 var wordBank = ["fazers", "accordion", "dimes"],
     arrLength = wordBank.length;
-// ,"villain",  "accordian", "food", "freudian", "dimes", "dijinn", "dingy", "plexus", "conqueror", "illest", "ego", "knishes"
+
+// gazillion - gazillion ear
+// villian - vaudville villian
+
 var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
 var splitWord = selectedWord.split("");
 var selectedWordLength = selectedWord.length;
@@ -82,7 +85,7 @@ function winnerNotification() {
         targetBeforeLyrics.innerHTML = "'" + lyricsObject[selectedWord]["lyrics before"];
         targetWordLyrics.innerHTML = lyricsObject[selectedWord]["lyrics word"];
         targetAfterLyrics.innerHTML = lyricsObject[selectedWord]["lyrics after"]+"'";
-        targetTrackInfo.innerHTML = "Lyrics From: " + lyricsObject[selectedWord]["track info"] + " - "  + lyricsObject[selectedWord]["album info"];
+        targetTrackInfo.innerHTML = "Lyrics From: " + lyricsObject[selectedWord]["track info"] + " - "  + "<em>" + lyricsObject[selectedWord]["album info"] +"</em>";
 
 
         sound.play()

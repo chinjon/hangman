@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Hangman</title>
+    <title>DOOM-man</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="https://use.fontawesome.com/dce08cf54a.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,13 +11,19 @@
   <body>
     <div id="topSplash">
       <div class="container">
-        <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/mf-doom-img2-cut.png" data-z-index="-3" id="doom-img">
-          <div  id="info" class="text-center">
+        <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/mf-doom-img2-cut.png" data-z-index="-3" style="height: 400px;" data-natural-height="700" id="doom-img">
+          <div class="text-center" id="info">
+          <p id="pHeader">
+            MF DOOM
+          </p>
           <p>
-            The slickest of rhyme dealers, MF DOOM's unconventional flow and distinctive production style is imaginative and infinitely creative.
+            The slickest of rhyme dealers, MF DOOM's unconventional flow and distinct production style is imaginative and infinitely creative.
           </p>
           <p>
             Born Daniel Dumile, the elusive hip-hop figure has been mystifying critics and fans alike with his laboriously crafted body of work that spans decades. With his trademark mask and penchant for words seldom used in our everday lives, the enigmatic DOOM has garnered a cult followed that extends to other genres of music from Mos Def to Radiohead to The Roots.
+          </p>
+          <p id="instructions">
+            Scroll Down and Press Any Letter To Start.
           </p>
         </div>
         </div>
@@ -32,7 +38,7 @@
     </div> -->
     <div class="row">
       <div class="col-md-12">
-        <h2>Clue: &nbsp;<span id="wordClue"></span></h2>
+        <h3>Clue: &nbsp;<span id="wordClue"></span></h3>
       </div>
     </div>
     <div class="row">
@@ -40,16 +46,17 @@
         <h1 id="userGameSpace"></h1>
       </div>
       <div class="col-md-4 text-center">
-        <h2>Used Letters: &nbsp; <span id="usedLettersWrong"></span></h2>
+        <h3>Used Letters: &nbsp; <span id="usedLettersWrong"></span></h3>
       </div>
       <div class="col-md-4 text-center">
-        <h2>Attempts Left: &nbsp;<span id="triesMessage">5</span></h2>
+        <h3>Attempts Left: &nbsp;<span id="triesMessage">5</span></h3>
+      </div>
+      <div class="row">
+        <h3 class="col-md-12 text-center" id="gameMessage"></h3>
       </div>
     </div>
 
-    <div class="row">
-      <h2 class="col-md-12 text-center" id="gameMessage"></h2>
-    </div>
+
     <div class="row">
       <h2 class="col-md-12" id="songAlbum"></h2>
     </div>
