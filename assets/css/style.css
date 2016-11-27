@@ -56,6 +56,11 @@ a:visited {
   text-decoration: none;
 }
 
+#songAlbum,
+#lyrics {
+  height: 120px;
+}
+
 #pHeader {
   font-size: 27px;
   font-weight: 800;
@@ -64,11 +69,11 @@ a:visited {
 #info {
   width: 510px;
   position: absolute;
-  top: 50px;
+  top: 90px;
   background: transparent;
   height: 500px;
   left: 300px;
-  font-size: 14.5px;
+  font-size: 17px;
 }
 
 #lyricsWord {
