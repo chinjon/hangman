@@ -17,6 +17,7 @@ font-family: 'Arvo', serif;
 
 body {
 font-family: 'Source Code Pro', monospace;
+padding-bottom: 120px;
 }
 
 h1,
@@ -71,18 +72,18 @@ section {
 
 #songAlbum,
 #lyrics {
-  height: 120px;
+  height: 80px;
 }
 
 #pHeader {
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 800;
+  margin-bottom: 30px;
 }
 
 #infoSection {
   width: 100%;
   display: block;
-  background-color: #bdc3c7;
   padding: 30px;
 }
 
