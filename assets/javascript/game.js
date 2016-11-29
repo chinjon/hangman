@@ -119,7 +119,7 @@ $('.parallax-window').parallax({
 
 $(document).ready(function() {
     $("#topSplash").hide();
-    $("#topSplash").fadeIn(2700, "linear");
+    $("#topSplash").fadeIn(3300, "linear");
 
     $("#wordClue").text(lyricsObject[selectedWord]["clue"]);
 
