@@ -17,7 +17,7 @@ font-family: 'Arvo', serif;
 
 body {
 font-family: 'Source Code Pro', monospace;
-padding-bottom: 120px;
+padding-bottom: 60px;
 }
 
 h1,
@@ -81,10 +81,25 @@ section {
   margin-bottom: 30px;
 }
 
-#infoSection {
+#musicInfo {
   width: 100%;
   display: block;
   padding: 30px;
+  background-color: #bdc3c7;
+}
+
+#moreInfo ul {
+  list-style: none;
+}
+
+#moreInfo {
+  width: 100%;
+  padding: 30px 30px 90px 30px;
+  background-color: #95a5a6;
+}
+
+#linksList {
+  margin-top: 25px;
 }
 
 #intro {
