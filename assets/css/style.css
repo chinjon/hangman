@@ -100,17 +100,17 @@ section {
 }
 
 #lyricsWord {
-  color: red;
+  color: #c0392b;
   font-weight: 800;
 }
 
 #triesMessage {
-  color: red;
+  color: #c0392b;
   font-style: 800;
 }
 
 #usedLetters {
-  color: red;
+  color: #c0392b;
   font-style: 800;
 }
 
@@ -121,6 +121,8 @@ section {
 
 #gameMessage {
   padding: 50px;
+  color: #c0392b;
+  font-weight: 800;
 }
 
 .footer {
