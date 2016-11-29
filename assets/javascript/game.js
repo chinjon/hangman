@@ -1,7 +1,6 @@
 var wordBank = ["fazers", "accordion", "dimes", "gazzillion", "villain"],
     arrLength = wordBank.length;
 
-
 var selectedWord = wordBank[Math.floor(Math.random() * arrLength)];
 var splitWord = selectedWord.split("");
 var selectedWordLength = selectedWord.length;
@@ -81,8 +80,6 @@ var lyricsObject = {
     }
 }
 
-
-
 var placeholder = "";
 for (var i = 0; i < selectedWordLength; i++) {
     placeholder += "-";
@@ -108,7 +105,6 @@ function winnerNotification() {
     }
 }
 
-
 function loseGameNotify() {
     targetGameMessage.innerHTML = loserMessage;
 }
@@ -128,12 +124,6 @@ $(document).ready(function() {
 var sound = new Howl({
     src: ['assets/sound/' + selectedWord + '-cut.mp3']
 });
-
-
-// Next, we give JavaScript a function to execute when onkeyup event fires.
-
-// need to take into account for duplicate letters
-// use FOR loop to iterate through each letter
 
 // create button to reset page?? http://stackoverflow.com/questions/6666363/is-it-possible-to-clear-a-form-an-reset-reload-the-page-with-one-button
 
