@@ -109,6 +109,10 @@ function loseGameNotify() {
     targetGameMessage.innerHTML = loserMessage;
 }
 
+function incorrectFeedback() {
+  $("body").effect("shake");
+}
+
 // button to scroll to start game
 $("#startButton").click(function() {
     $('html, body').animate({
@@ -180,8 +184,10 @@ document.onkeyup = function() {
             }
         } else if (((splitWord.indexOf(userInput > -1)) && (correctLetters.indexOf(userInput) > -1)) || (usedWrongLetters.indexOf(userInput) > -1)) {
             // console.log("Sorry you have already selected that letter");
+            incorrectFeedback();
             targetGameMessage.innerHTML = letterAlreadyPicked;
         } else {
+            incorrectFeedback();
             targetGameMessage.innerHTML = letterNotExist;
             incorrectTries -= 1;
             targetTriesMessage.innerHTML = incorrectTries;

@@ -17,7 +17,8 @@ Upon winning, the corresponding song to the word will play and some info on the 
 ## Tools Used  
 
 Used Parallax.JS to create the header along with an overlay for the text. For sound, Howler.JS was implemented and tracks coincide with the words in the word bank.  
-Used Bootstrap as the basis for the UI.
+Used Bootstrap as the basis for the UI.  
+JQuery and JQuery UI was implemented for animations and selector rules. 
 
 ## Next  
 
@@ -30,4 +31,4 @@ Perhaps adding links for each song upon winning each game.
 
 Fixed UI by rearranging `<div>` and rearranging where `.container` should be. Upon load the parallax renders enough so that no missing space appears at the top splash screen when scrolled to the bottom of the page.
 
-Fair-use might not work here soooooo don't sue me Dumile plz. 
+Fair-use might not work here soooooo don't sue me Dumile plz.
