@@ -107,6 +107,7 @@ function winnerNotification() {
 
 function loseGameNotify() {
     targetGameMessage.innerHTML = loserMessage;
+    loseSound.play();
 }
 
 function incorrectFeedback() {
@@ -134,6 +135,10 @@ $(document).ready(function() {
 
 var sound = new Howl({
     src: ['assets/sound/' + selectedWord + '-cut.mp3']
+});
+
+var loseSound = new Howl({
+  src: ['assets/sound/zero-cut.mp3']
 });
 
 // create button to reset page?? http://stackoverflow.com/questions/6666363/is-it-possible-to-clear-a-form-an-reset-reload-the-page-with-one-button
