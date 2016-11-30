@@ -109,6 +109,13 @@ function loseGameNotify() {
     targetGameMessage.innerHTML = loserMessage;
 }
 
+// button to scroll to start game
+$("#startButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#mainGameSpace").offset().top
+    }, 800);
+});
+
 $('.parallax-window').parallax({
     imageSrc: 'assets/images/mf-doom-img2-cut.png'
 });
