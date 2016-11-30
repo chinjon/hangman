@@ -13,16 +13,17 @@ The theme of the game is based on rapper MF DOOM who is know for this usage of u
 Game starts anytime when user presses any letter on the keyboard.  
 Upon winning, the corresponding song to the word will play and some info on the album and verse the word came from will appear.  
 
+The screen or the lower half of the page will shake when the incorrect letter or the same letter is "selected" or pressed.
 
 ## Tools Used  
 
 Used Parallax.JS to create the header along with an overlay for the text. For sound, Howler.JS was implemented and tracks coincide with the words in the word bank.  
 Used Bootstrap as the basis for the UI.  
-JQuery and JQuery UI was implemented for animations and selector rules. 
+JQuery and JQuery UI was implemented for animations and selector rules.
 
 ## Next  
 
-Would like to tidy up the UI and add some animation to it.  
+Would like to tidy up the UI and add ~~some animation to it~~ add more animation.  
 Perhaps adding links for each song upon winning each game.  
 
 ## Problems  
