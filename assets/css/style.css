@@ -155,6 +155,10 @@ section {
   color: #fff;
 }
 
+#soundIcon {
+  color: #c0392b;
+}
+
 @media screen and (max-width: 1210px) {
   #info {
     width: 370px;
