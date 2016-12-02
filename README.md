@@ -28,7 +28,7 @@ Perhaps adding links for each song upon winning each game.
 
 ## Problems  
 
-~~~Upon load, the translucent overlay will load and fill based on how far down the page is scrolled. The plugin will not resize the overlay as the page gets larger in height (ie. when elements are added with JQuery).~~
+~~Upon load, the translucent overlay will load and fill based on how far down the page is scrolled. The plugin will not resize the overlay as the page gets larger in height (ie. when elements are added with JQuery).~~
 
 Fixed UI by rearranging `<div>` and rearranging where `.container` should be. Upon load the parallax renders enough so that no missing space appears at the top splash screen when scrolled to the bottom of the page.
 
