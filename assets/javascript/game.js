@@ -6,6 +6,9 @@ var splitWord = selectedWord.split("");
 var selectedWordLength = selectedWord.length;
 console.log(selectedWord);
 
+var gameWon = false;
+var gameLost = false;
+
 // MESSAGES TO USER
 var winnerMessage = "Congrats, you win!",
     loserMessage = "Sorry, out of tries. Press any key to try again.",
@@ -157,7 +160,7 @@ document.onkeyup = function() {
             // console.log(userInput);
 
         // need to create a condition to stop program all together and reset page
-        if (incorrectTries <= 0) {
+        if (incorrectTries <= 0 && gameLost === true) {
             incorrectTries = 0;
 
             targetTriesMessage.innerHTML = incorrectTries;
@@ -170,7 +173,9 @@ document.onkeyup = function() {
             targetWrongLetters.innerHTML = usedWrongLetters;
             incorrectTries -= 1;
             targetTriesMessage.innerHTML = incorrectTries;
+            gameLost = true;
             loseGameNotify();
+            refreshPage();
         } else if ((splitWord.indexOf(userInput) > -1) && (correctLetters.indexOf(userInput) === -1)) {
             // prevents users from selecting letters already selected
 
@@ -183,6 +188,7 @@ document.onkeyup = function() {
                     wordCounter += 1;
                     correctLetters.push(userInput);
                     //console.log(correctLetters);
+                    gameWon = true;
                     targetGameMessage.innerHTML = "Correct Letter!";
                     winnerNotification();
                 }
