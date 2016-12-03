@@ -191,6 +191,7 @@ document.onkeyup = function() {
                     gameWon = true;
                     targetGameMessage.innerHTML = "Correct Letter!";
                     winnerNotification();
+                    refreshPage();
                 }
             }
         } else if (((splitWord.indexOf(userInput > -1)) && (correctLetters.indexOf(userInput) > -1)) || (usedWrongLetters.indexOf(userInput) > -1)) {
