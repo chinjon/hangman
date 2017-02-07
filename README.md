@@ -4,7 +4,7 @@ A hangman-styled game for Rutgers Coding Bootcamp.
 
 [LIVE LINK for project](https://chinjon.github.io/hangman/)
 
-<img src="screenshot-loaded.jpg" width="696">
+<img src="doom-screen.gif" width="840">
 
 # Information
 
