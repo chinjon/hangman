@@ -4,6 +4,8 @@ A hangman-styled game for Rutgers Coding Bootcamp.
 
 [LIVE LINK for project](https://chinjon.github.io/hangman/)
 
+<img src="screenshot-loaded.jpg" width="696">
+
 # Information
 
 The theme of the game is based on rapper MF DOOM who is know for this usage of uncanny words and ability to deliver verbose bars. Being that he's my favorite rapper and he has a knack for weird words, I thought doing a word based game on him would work.
